@@ -70,6 +70,24 @@ $(document).ready(function(){
    
     restart.addEventListener('click', init);
 
+
+    var totalSecs = 0;
+    var timer = setInterval(setTime, 1000);
+
+    function setTime (){
+        totalSecs++ ; 
+        secondsLabel.innerHTML = convertToStr(totalSecs%60);
+        minutesLabel.innerHTML = convertToStr(parseInt(totalSecs/60));
+    };
+
+    function convertToStr (value){
+        let valueStr = value + '' ;
+        if (valueStr.length < 2){
+            return '0' + valueStr; 
+        } else {
+            return valueStr;
+        }
+    }
 // Shuffle function from http://stackoverflow.com/a/2450976
 // function shuffle(array) {
 //     var currentIndex = array.length, temporaryValue, randomIndex;
