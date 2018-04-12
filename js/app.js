@@ -104,9 +104,32 @@ $(document).ready(function(){
                 }
             rating();
         });
-        
-               
     }
+
+    function checMatch (cards){
+        let opCards = cards;
+            if ($('.card.show.open ').length==2){
+                moves.innerHTML = count();
+                if (opCards&&opCards[0].children[0].className == opCards[1].children[0].className){
+                    $('.card.show.open').each(function(){
+                        $(this).addClass('match');
+                    });
+                    $('.card.show.open').each(function(){
+                        $(this).removeClass('show open');
+                    });    
+                    checWin();
+                }else {
+                    $deck.find('.open').addClass('unmatch');
+                    setTimeout(function(){
+                        $('.card.show.open').each(function(){
+                            $(this).removeClass('show open unmatch');
+                        }); 
+                    },400);
+                }
+                
+        }
+    }
+
 
 
 // Shuffle function from http://stackoverflow.com/a/2450976
