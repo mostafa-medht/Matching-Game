@@ -45,6 +45,18 @@ $(document).ready(function(){
     reset();
     }
 
+    function shuffle (cards){
+        let random = 0; 
+        let temp = 0;
+        for(let i=0;i<cards.length ;i++){
+            random = Math.round(Math.random()*i) ;
+            //console.log(random);
+            temp = cards[i];
+            cards[i] = cards[random];
+            cards[random] = temp;
+        }
+        console.log(cards)
+    }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 // function shuffle(array) {
