@@ -231,7 +231,7 @@ footer {
  * Responsiveness
  */
 
-@media only screen and (max-width: 800px){
+/*@media only screen and (max-width: 800px){
     .deck .card{
       width: 75px;
       height: 75px;
@@ -252,5 +252,54 @@ footer {
   
     .deck {
       width: 300px;
+    }
+}*/
+
+@media screen and (max-width:800px) and (max-width: 900px) {
+    .deck {
+        width: 80%;
+    }
+    .featured-paragraph {
+      font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width:749px) {
+  .deck {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .deck .card{
+      width:22%;
+      line-height: 50%;
+    }
+  
+    .deck {
+      width: 90%;
+    }
+
+    .score-panel {
+        font-size: 60%;
+        width: 65%;
+    }
+
+    .score-panel .restart{
+        margin-right: 0px;
+        margin-left: 0px;
+        padding: 0;
+    }
+
+    .score-panel button {
+        width: 13%;
+        font-size: 40%;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 4px;
+    }   
+
+    header h1{
+        font-size: 1.8em;
     }
 }
