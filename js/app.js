@@ -146,6 +146,17 @@ $(document).ready(function(){
         }
     }
 
+    function rating(){
+        if (moves.innerHTML > 7 && moves.innerHTML <= 10){
+            uls[0].children[0].firstChild.className = "fa fa-star-o";
+        } else if ( moves.innerHTML > 10 && moves.innerHTML <=20) {
+            uls[0].children[1].firstChild.className = "fa fa-star-o";
+        }
+        else  {
+            checLose();
+        }
+    };
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 // function shuffle(array) {
 //     var currentIndex = array.length, temporaryValue, randomIndex;
