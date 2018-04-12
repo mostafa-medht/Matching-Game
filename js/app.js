@@ -88,6 +88,27 @@ $(document).ready(function(){
             return valueStr;
         }
     }
+
+    function clickHandler (e){
+        $('.card').on('click',function(e){
+                if (e.target.id === 'deck' ||
+                e.target.className.includes('open') ||
+                e.target.className.includes('match')
+            ) {
+                    return true;
+                } 
+                $(this).addClass('card show open')
+                this.openCards = document.getElementsByClassName('card show open');
+                if(this.openCards && this.openCards.length >= 2) {
+                    checMatch(this.openCards);
+                }
+            rating();
+        });
+        
+               
+    }
+
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 // function shuffle(array) {
 //     var currentIndex = array.length, temporaryValue, randomIndex;
