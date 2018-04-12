@@ -225,3 +225,32 @@ footer {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
+
+  /*
+ * Responsiveness
+ */
+
+@media only screen and (max-width: 800px){
+    .deck .card{
+      width: 75px;
+      height: 75px;
+      line-height: 75px;
+    }
+  
+    .deck {
+      width: 500px;
+    }
+}
+  
+@media only screen and (max-width: 450px){
+    .deck .card{
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+    }
+  
+    .deck {
+      width: 300px;
+    }
+}
