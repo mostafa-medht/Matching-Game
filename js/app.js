@@ -138,6 +138,14 @@ $(document).ready(function(){
         }
     }
 
+    function checLose(){
+        if (moves.innerHTML >20){
+            $('#myText').text(`In ${totalSecs} seconds, you did a total of ${moves.innerHTML} moves with Scores 0. Well done!`);
+            $('#infoModalLabel').html('<h4> &#9785; &#9785 OOps , You Lose &#9785; &#9785; <h4>');
+            $('#myModal').modal('toggle');
+        }
+    }
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 // function shuffle(array) {
 //     var currentIndex = array.length, temporaryValue, randomIndex;
