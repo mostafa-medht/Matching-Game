@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-* [Instructions](#Mostafa's Memory Game)
-* [Installing from Source](#Installing from Source)
-* [How to Play](#How to Play)
-* [Tools Used](#Tools Used)
-* [Known Issues](#Known Issues)
+* [Instructions](#Mostafa's_Memory_Game)
+* [Installing from Source](#Installing_from_Source)
+* [How to Play](#How_to_Play)
+* [Tools Used](#Tools_Used)
+* [Known_Issues](#Known_Issues)
 * [Author](#Author)
 * [License](#License)
 
@@ -19,7 +19,7 @@ In my Fend Udacity course, I had to create a memory game where upon clicked, two
 ## Installing from Source
 
 1. Clone the following repo: 
-  * git clone https://github.com/
+  * git clone https://github.com/mostafa-medht/Matching-Game
 
 2. Load index.html in browser.
 
