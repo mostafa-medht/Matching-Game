@@ -131,7 +131,7 @@ $(document).ready(function(){
     }
 
     function checWin(){
-        if($('.match').length == 2){
+        if($('.match').length == 16){
         $('#myText').text(`In ${totalSecs} seconds, you did a total of ${moves.innerHTML} moves with Scores ${$('.fa-star').length} . Well done!`);
         $('#infoModalLabel').html('<h4> &#9818; &#9787; &#9996; Congratulation ,You Win ! &#9996; &#9818; &#9787; <h4>');    
         $('#myModal').modal('toggle');
