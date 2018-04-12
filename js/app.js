@@ -62,6 +62,14 @@ $(document).ready(function(){
         return counter +=1;
     };
 
+    function reset(){
+        totalSecs  = 0;
+        counter = 0;
+        moves.innerHTML = '0';
+    };
+   
+    restart.addEventListener('click', init);
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 // function shuffle(array) {
 //     var currentIndex = array.length, temporaryValue, randomIndex;
