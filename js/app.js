@@ -23,6 +23,28 @@ $(document).ready(function(){
     $moves = $('.moves');
 
 
+    cards = ['diamond','diamond','paper-plane-o','paper-plane-o','anchor','anchor','bolt','bolt','cube','cube','leaf','leaf','bicycle','bicycle','bomb','bomb'];
+    
+    function init () {
+    shuffle(cards);
+    $deck.empty();
+    // A for loop creates 16  <li> tags with the class of card for every <i> tag
+    // A class of fa fa- and a name of each object from the objects=[] array
+    for (let i = 0; i < cards.length; i++) {
+        $deck.append($('<li class="card"><i class="fa fa-' + cards[i] + '"></i></li>'))
+    }
+    
+    for (let i=0; i<=2 ;i++){
+     uls[0].children[i].firstChild.className = "fa fa-star";
+    }
+
+    clickHandler();
+    
+    var timer = setInterval(setTime, 1000);
+    window.clearInterval(timer);
+    reset();
+    }
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 // function shuffle(array) {
