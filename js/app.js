@@ -22,9 +22,11 @@ $(document).ready(function(){
     $deck = $('.deck');
     $moves = $('.moves');
 
+    // Array of cards object 
 
     cards = ['diamond','diamond','paper-plane-o','paper-plane-o','anchor','anchor','bolt','bolt','cube','cube','leaf','leaf','bicycle','bicycle','bomb','bomb'];
     
+    // Initialization Function  
     window.init = function () {
 	    shuffle(cards);
 	    $deck.empty();
@@ -45,6 +47,8 @@ $(document).ready(function(){
 	    reset();
     }
 
+    // Shuffle Function with cards obj as para 
+
     function shuffle (cards){
         let random = 0; 
         let temp = 0;
@@ -58,9 +62,13 @@ $(document).ready(function(){
         console.log(cards)
     }
 
+    // Counter Function used with time and moves 
+
     function count() {
         return counter +=1;
     };
+
+    // Reset function
 
     function reset(){
         totalSecs  = 0;
@@ -74,11 +82,15 @@ $(document).ready(function(){
     var totalSecs = 0;
     var timer = setInterval(setTime, 1000);
 
+    // Set time function
+
     function setTime (){
         totalSecs++ ; 
         secondsLabel.innerHTML = convertToStr(totalSecs%60);
         minutesLabel.innerHTML = convertToStr(parseInt(totalSecs/60));
     };
+
+    // convert time to string fun 
 
     function convertToStr (value){
         let valueStr = value + '' ;
@@ -88,6 +100,8 @@ $(document).ready(function(){
             return valueStr;
         }
     }
+
+    // Click Handler fun
 
     function clickHandler (e){
         $('.card').on('click',function(e){
@@ -105,6 +119,8 @@ $(document).ready(function(){
             rating();
         });
     }
+
+    // Check match fun 
 
     function checMatch (cards){
         let opCards = cards;
@@ -130,6 +146,8 @@ $(document).ready(function(){
         }
     }
 
+    // check Win fun
+
     function checWin(){
         if($('.match').length == 16){
         $('#myText').text(`In ${totalSecs} seconds, you did a total of ${moves.innerHTML} moves with Scores ${$('.fa-star').length} . Well done!`);
@@ -138,6 +156,8 @@ $(document).ready(function(){
         }
     }
 
+    // Check lose fun
+
     function checLose(){
         if (moves.innerHTML >20){
             $('#myText').text(`In ${totalSecs} seconds, you did a total of ${moves.innerHTML} moves with Scores 0. Sorry!`);
@@ -145,6 +165,8 @@ $(document).ready(function(){
             $('#myModal').modal('toggle');
         }
     }
+
+    // Rating fun or scores
 
     function rating(){
         if (moves.innerHTML > 7 && moves.innerHTML <= 10){

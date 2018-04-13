@@ -22,6 +22,9 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+/*
+    Container 
+*/
 .container {
     display: flex;
     justify-content: center;
@@ -186,13 +189,14 @@ h4 {
     opacity: 0.8;
     display: none;
 }
-
+ /* Resetart game*/
 .restartGame {
     font-size: 20px;
     font-weight: bold;
     text-decoration: none; 
     background-color: black;
 }
+
 /* Footer */
 
 footer {
@@ -212,6 +216,7 @@ footer {
   }
   
 
+  /* Keyframes */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
