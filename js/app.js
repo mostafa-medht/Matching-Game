@@ -7,19 +7,15 @@ $(document).ready(function(){
      * Create a list that holds all of your cards
      */
     // Adding main Vars 
-    const deck = document.querySelectorAll('.card');
-    const matchedCards = document.getElementsByClassName('card match');
-    const openCards = document.getElementsByClassName('card show open');
+    //const matchedCards = document.getElementsByClassName('card match');
+    //const openCards = document.getElementsByClassName('card show open');
     const restart = document.getElementById('restart');
     const moves = document.getElementById("moves");
-    const stars = document.getElementById("stars");
-    const star = document.querySelector('.fa-star');
     const uls = document.getElementsByTagName('ul');
-    const winClass = document.getElementById('winClass');
     let counter = 0 ;
     const minutesLabel = document.getElementById("minutes");
     const secondsLabel = document.getElementById("seconds");
-    $deck = $('.deck');
+    const $deck = $('.deck');
     $moves = $('.moves');
 
     // Array of cards object 
@@ -33,7 +29,7 @@ $(document).ready(function(){
 	    // A for loop creates 16  <li> tags with the class of card for every <i> tag
 	    // A class of fa fa- and a name of each object from the objects=[] array
 	    for (let i = 0; i < cards.length; i++) {
-	        $deck.append($('<li class="card"><i class="fa fa-' + cards[i] + '"></i></li>'))
+	        $deck.append($('<li class="card"><i class="fa fa-' + cards[i] + '"></i></li>'));
 	    }
 	    
 	    for (let i=0; i<=2 ;i++){
@@ -42,10 +38,10 @@ $(document).ready(function(){
 
 	    clickHandler();
 	    
-	    var timer = setInterval(setTime, 1000);
+	    timer = setInterval(setTime, 1000);
 	    window.clearInterval(timer);
 	    reset();
-    }
+    };
 
     // Shuffle Function with cards obj as para 
 
@@ -59,14 +55,14 @@ $(document).ready(function(){
             cards[i] = cards[random];
             cards[random] = temp;
         }
-        console.log(cards)
+        console.log(cards);
     }
 
     // Counter Function used with time and moves 
 
     function count() {
         return counter +=1;
-    };
+    }
 
     // Reset function
 
@@ -74,7 +70,7 @@ $(document).ready(function(){
         totalSecs  = 0;
         counter = 0;
         moves.innerHTML = '0';
-    };
+    }
    
     restart.addEventListener('click', init);
 
@@ -88,7 +84,7 @@ $(document).ready(function(){
         totalSecs++ ; 
         secondsLabel.innerHTML = convertToStr(totalSecs%60);
         minutesLabel.innerHTML = convertToStr(parseInt(totalSecs/60));
-    };
+    }
 
     // convert time to string fun 
 
@@ -111,7 +107,7 @@ $(document).ready(function(){
             ) {
                     return true;
                 } 
-                $(this).addClass('card show open')
+                $(this).addClass('card show open');
                 this.openCards = document.getElementsByClassName('card show open');
                 if(this.openCards && this.openCards.length >= 2) {
                     checMatch(this.openCards);
@@ -177,7 +173,7 @@ $(document).ready(function(){
         else  {
             checLose();
         }
-    };
+    }
 
     init ();
 
