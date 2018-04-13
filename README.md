@@ -6,7 +6,7 @@
 * [Installing from Source](#Installing_from_Source)
 * [How to Play](#How_to_Play)
 * [Tools Used](#Tools_Used)
-* [Known_Issues](#Known_Issues)
+* [resources](#resources)
 * [Author](#Author)
 * [License](#License)
 
@@ -47,9 +47,12 @@ In my Fend Udacity course, I had to create a memory game where upon clicked, two
 * Images taken from Google-Images>Tools>Usage-Rights>Labeled for reuse with modification
 
 
-## Known Issues:
+## Resources:
 
-* 
+* starer coder from udacity as a repo : https://github.com/udacity/fend-project-memory-game
+* Bootstrap libirary from : https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css , https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css ,https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js 
+* JQuery LIbirary : https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js 
+* Google Font Api :https://fonts.googleapis.com/css?family=Tangerine 
 
 ## Author
 
